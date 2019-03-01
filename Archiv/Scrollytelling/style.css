@@ -1,0 +1,218 @@
+@font-face {
+font-family: greatvibes;
+src: url(assets/font/greatvibes/GreatVibes-Regular.otf);
+}
+@font-face {
+    font-family: forum;
+    src: url(assets/font/forum/Forum-Regular.otf);
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.first_slide {
+    /* The image used */
+    background-image: url("assets/start_couple.jpg");
+    /* Set a specific height */
+    min-height: 800px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: relative; */
+}
+
+.first_text{
+    /* position: absolute; */
+    /* margin-top: 300px; */
+    width: 100%;
+    font-family: greatvibes;
+    font-size: 60px;
+    color: rgba(250,250,250, .95);
+    text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    background-color: transparent;
+    align-content: center;
+    height:100px;
+    text-align: center;
+    padding-top:300px;
+}
+
+.second_slide{
+    background-image: url("assets/start_couple.jpg");
+    /* Set a specific height */
+    min-height: 800px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.second_text{
+    font-family: forum;
+    color: black;
+    font-size: 30px;
+    text-shadow: 0 0 6px rgb(155, 155, 155);
+    padding-top:20px;
+    text-align: center;
+}
+
+.third_slide{
+    /* background-image: url("assets/doetlingen.jpg"); */
+    /* Set a specific height */
+    background: white;
+    height: 500px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third_pic{
+    float: right;
+    margin-right: 50px;
+    margin-top: -250px;
+}
+
+.item_map {
+  position: fixed;
+  top: 0;
+  background: url("assets/doetlingen.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  align-content: center;
+  
+}
+
+.ring1{
+    position: fixed;
+  top: 0;
+  margin-top: 300px;
+  left:500px;
+  background: url("assets/rings.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;   
+}
+
+.ring_kirche{
+    position: fixed;
+  top: 0;
+  margin-top: 300px;
+  left:350px;
+  background: url("assets/rings.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;   
+}
+
+.ring_feier{
+    position: fixed;
+    top: 0;
+    margin-top: 200px;
+    left:500px;
+    background: url("assets/rings.png");
+    background-size: 50px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;   
+}
+
+
+.item {
+    width: 200px;
+  margin: 50px auto;
+  max-height: 250px;
+  padding: 75px 20px;
+  background: #ccc;
+  text-align: center;
+  color: #fff;
+  font-size: 3em;
+
+}
+
+.third_textbox{
+    width: 400px;
+    background-color: white;
+    position: relative;
+    top: 50px;
+    left: 30px;
+    
+}
+
+.textbox{
+    height: min-content;
+    /* background: #b6af9d66; */
+    margin: 0 auto;
+    width: 800px;
+}
+
+.map_title{
+    margin: 0;
+    font-family: forum;
+    color: black;
+    font-size: 30px;
+    text-shadow: 0 0 6px rgb(155, 155, 155);
+    padding-top:50px;
+    margin-left: 100px;
+    position: relative;
+    padding-top:500px;
+}
+
+.map_text{
+    font-family: forum;
+    color: black;
+    font-size: 20px;
+    text-shadow: 0 0 6px rgb(155, 155, 155);
+    position: relative;
+    margin-top: 800px;
+    width: 300px;
+    float: right;
+    right: 50px;
+    background-color: #d7c29c66;
+    min-height: 100px;
+    text-align: center;
+}
+
+
+.end {
+    position: fixed;
+    top: 0;
+    background-image: url("assets/hands.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    align-content: center; 
+}
+
+
+
+  
+
+
+.end_text{
+    width: 100%;
+    font-family: greatvibes;
+    font-size: 60px;
+    color: rgba(250,250,250, .95);
+    text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    background-color: transparent;
+    align-content: center;
+    height:100px;
+    text-align: center;
+    padding-top:300px;
+    position: relative;
+}
+
+
+
+

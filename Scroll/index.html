@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+<style>
+  body {
+  /* feel free to change height */
+  height: 5000px;
+  background: white;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: black;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-weight: 100;
+  padding: 25px 15px;
+  /* text-shadow: 1px 1px 1px #333; */
+  margin-top: 90px;
+  margin-left: 50%;
+}
+
+#map_svg_container{
+  position: fixed;
+  top: 30%;
+  left: 20%;
+  width: 300px;
+  height: 500px;
+  margin: -75px 0 0 -75px;
+  z-index: -1;
+}
+
+#map_tag2{
+  position: fixed;
+  top: 30%;
+  left: 20%;
+  width: 300px;
+  height: 500px;
+  margin: -75px 0 0 -75px;
+  z-index: -1;
+}
+
+#star-svg{
+  z-index: 9;
+  position: absolute;
+  height: 700px;
+  left: -120px;
+  top: -130px;
+}
+
+#map {
+  position: absolute;
+  background: url("assets/tourkarte2.JPG") no-repeat;
+  background-position: top;
+  background-size: cover;
+  top: 0%;
+  z-index: 1;
+  height: 100%;
+  width: 400px;
+}
+
+#map2 {
+  position: absolute;
+  background: url("assets/tourkarte.JPG") no-repeat;
+  background-position: top;
+  background-size: cover;
+  top: 0%;
+  z-index: 1;
+  height: 100%;
+  width: 400px;
+}
+
+#marker{
+  position: absolute;
+  background: url("assets/marker.svg") no-repeat;
+  background-position: top;
+  background-size: contain;
+  top: 15px;
+  z-index: 1;
+  height: 500px;
+  width: 15%;
+  left: 100px;
+}
+
+</style>
+
+
+<h1>Tourenablauf</h1>
+
+<div id="map_svg_container">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" id="star-svg">
+      <path fill="none" stroke="#BF3512" stroke-width="2" id="star-path"
+      d="m -99.68318,185.03912 c 11.401012,-1.55911 22.801727,-3.11818 30.986796,-5.60299 8.185068,-2.48481
+      13.154738,-5.89537 22.947077,-1.51074 9.792339,4.38463 24.409531,16.56563 38.051462,24.99437 13.6419314,
+      8.42875 26.309417,13.10598 35.615124,16.02922 9.305708,2.92325 15.249738,4.09257 22.167861,10.66964 6.918124,
+      6.57708 14.811197,18.56286 21.729769,22.50918 6.918571,3.94632 12.862506,-0.14622 19.7319,-0.97441 6.869394,
+      -0.82819 14.665151,1.60798 19.439781,0.92574 4.77463,-0.68223 6.52862,-4.48255 4.04409,-8.67219 -2.48453,
+      -4.18963 -9.2086,-8.76979 -20.268263,-12.81365 C 83.702752,226.54943 68.307046,223.04155 49.744186,217.48731
+      31.181325,211.93307 9.4520312,204.33269 -7.4055211,196.82963 -24.263073,189.32656 -36.248356,181.92102
+      -50.426103,179.92341 c -14.177747,-1.9976 -30.547904,1.41285 -38.830498,3.11811 -8.282594,1.70527 -8.477475,
+      1.70527 -8.672624,1.70527"/>
+  </svg>
+  <div id="map"></div>
+  <div id="marker"></div>
+</div>
+
+<div style="margin-top: 550px;" id="trigger"></div>
+<div data-aos="fade-in" data-aos-anchor="#trigger"
+    data-aos-anchor-placement="top-center" style="width: 100%; height: 1000px; background: white;">
+</div>
+
+
+<div style="margin-top: 550px;" id="trigger2"></div>
+
+<div data-aos="fade-in" data-aos-anchor="#trigger2" data-aos-anchor-placement="top-center" id="map_tag2">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" id="star-svg">
+      <path fill="none" stroke="#BF3512" stroke-width="2" id="star-path"
+      d="m -99.68318,185.03912 c 11.401012,-1.55911 22.801727,-3.11818 30.986796,-5.60299 8.185068,-2.48481
+      13.154738,-5.89537 22.947077,-1.51074 9.792339,4.38463 24.409531,16.56563 38.051462,24.99437 13.6419314,
+      8.42875 26.309417,13.10598 35.615124,16.02922 9.305708,2.92325 15.249738,4.09257 22.167861,10.66964 6.918124,
+      6.57708 14.811197,18.56286 21.729769,22.50918 6.918571,3.94632 12.862506,-0.14622 19.7319,-0.97441 6.869394,
+      -0.82819 14.665151,1.60798 19.439781,0.92574 4.77463,-0.68223 6.52862,-4.48255 4.04409,-8.67219 -2.48453,
+      -4.18963 -9.2086,-8.76979 -20.268263,-12.81365 C 83.702752,226.54943 68.307046,223.04155 49.744186,217.48731
+      31.181325,211.93307 9.4520312,204.33269 -7.4055211,196.82963 -24.263073,189.32656 -36.248356,181.92102
+      -50.426103,179.92341 c -14.177747,-1.9976 -30.547904,1.41285 -38.830498,3.11811 -8.282594,1.70527 -8.477475,
+      1.70527 -8.672624,1.70527"/>
+  </svg>
+  <div id="map2"></div>
+  <div id="marker"></div>
+</div>
+
+
+
+
+<div style="font-family: 'Open Sans', sans-serif; z-index: 999; ">
+
+<div style="width:400px; margin-left: 50%;">
+<div style="margin-top:200px;">
+  <p style="font-size: 20px; color: #F0C800; font-weight: bold;"> TAG 1 | Zustieg - Materialtransport - Einführung und Übung </p>
+  <p>Treffpunkt ist am Morgen der Parkplatz hinter der Kirche in Krimml. Materialverladung und Transfer mit dem Hüttentaxi.</p>
+  <div style="margin-top: 250px;" id="trigger"></div>
+  <p data-aos="fade-in" data-aos-delay="200" data-aos-duration="1500" data-aos-anchor="#trigger"
+      data-aos-anchor-placement="top-center" style="margin-top: 500px;" >
+  Zustieg ab Materialseilbahn bzw. Innere Keesalm Richtung Warnsdorfer Hütte (500 Hm ca. 1,5-2 h).
+  Lager- bzw. Zimmerbezug, kurze Rast sowie Programmbesprechung der Tage.
+  Im nahegelegenen Klettergarten werden die ersten Seiltechnikübungen durchgemacht
+  (Abseilen, Knotenkunde, Anseilmethoden, Gletscherseilschaft, Fixpunkte im Fels).
+  Abends Orientierung, Gletscher- und Wetterkunde.
+  </p>
+</div>
+
+<div style="margin-top: 250px;" id="trigger2"></div>
+<div style="margin-top:500px;">
+  <div data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000" data-aos-anchor="#trigger2"
+      data-aos-anchor-placement="top-center" >
+      <p style="font-size: 20px; color: #F0C800; font-weight: bold;">TAG 2 | Übungstag<p>
+      <p>Heute steht die Technik und Taktik beim Begehen von Gletschern sowie die Spaltenbergung (Selbst- und Kameradenrettung) am Programm.
+        Hintersichert versuchst du, den Sturz deiner Kollegin / deines Kollegen in die Gletscherspalte zu „halten“
+        sowie diese/n aus der Spalte mit Hilfe der Losen Rolle (eine spezielle Rettungstechnik) zu bergen.
+        Die eigene Rettung aus der Spalte mittels Prusik und Münchhausen wirst du ebenfalls üben.
+        Abends Wiederholung der Tagesinhalte, Seil- und Sicherungstheorie.</p>
+  </div>
+</div>
+
+<div style="margin-top:1000px">
+  <p>TAG 3 | Übungstag</p>
+  <p>Heute suchen wir uns einen Ort mit blanken Eisflächen, wo wir das Gehen mit Steigeisen und Pickel sowie das Erstellen
+    von Fixpunkten in Eis und Firn üben werden. Wenn noch Zeit bleibt, versuchen wir uns an einem Eisaufschwung im Eisklettern.
+    Die Orientierung im Gelände sowie eine Wiederholung der Inhalte der letzten drei Tage ist allgegenwärtiger Inhalt dieses Tages.
+    Abends selbständige Tourenplanung für den morgigen Tourentag.</p>
+</div>
+
+<div style="margin-top:1300px;">
+  <p>TAG 4 | Tourentag - Abstieg - Heimreise</p>
+  <p>Durchführung der selbst von dir geplanten Tour mit Unterstützung von uns.
+    Gemeinsamer Abstieg und Hüttentaxitransfer. Zurück am Parkplatz um ca. 17 Uhr.</p>
+</div>
+
+</div></div>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="text/javascript">
+
+  AOS.init();
+
+  // Get a reference to the <path>
+  var path = document.querySelector('#star-path');
+  console.log("Path: " + path);
+
+  // Get length of path... ~577px in this case
+  var pathLength = path.getTotalLength();
+  console.log("Length: " + pathLength);
+
+  // Make very long dashes (the length of the path itself)
+  path.style.strokeDasharray = pathLength + ' ' + pathLength;
+
+  // Offset the dashes so the it appears hidden entirely
+  path.style.strokeDashoffset = pathLength;
+
+  // Jake Archibald says so
+  // https://jakearchibald.com/2013/animated-line-drawing-svg/
+  path.getBoundingClientRect();
+
+  // When the page scrolls...
+  window.addEventListener("scroll", function(e) {
+
+    // What % down is it?
+    // https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript/2387222#2387222
+    // Had to try three or four differnet methods here. Kind of a cross-browser nightmare.
+    var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+    // Length to offset the dashes
+    var drawLength = pathLength * scrollPercentage;
+
+    // Draw in reverse
+    path.style.strokeDashoffset = pathLength - drawLength;
+
+    // When complete, remove the dash array, otherwise shape isn't quite sharp
+   // Accounts for fuzzy math
+    if (scrollPercentage >= 0.99) {
+      path.style.strokeDasharray = "none";
+
+    } else {
+      path.style.strokeDasharray = pathLength + ' ' + pathLength;
+    }
+
+  });
+</script>
+
+
+
+</body>
+</html>

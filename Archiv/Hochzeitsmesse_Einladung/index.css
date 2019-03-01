@@ -1,0 +1,532 @@
+section {
+    -webkit-transition: opacity 0.5s ease-in-out!important;
+    -moz-transition: opacity 0.5s ease-in-out!important;
+    -o-transition: opacity 0.5s ease-in-out!important;
+    transition: opacity 0.5s ease-in-out!important;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    border-color: #dbd0a1 !important;
+    border-style: solid !important;
+}
+
+.popup_font{
+    font-size:18px;
+    font-family: forum;
+    font-weight: bold;
+}
+
+
+
+/* ---fonts ---- */
+@font-face {
+    font-family: greatvibes;
+    src: url(assets/font/greatvibes/GreatVibes-Regular.otf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(assets/font/montserrat/Montserrat-Regular.otf);
+}
+
+@font-face {
+    font-family: forum;
+    src: url(assets/font/forum/Forum-Regular.otf);
+}
+
+@font-face {
+    font-family: sofia;
+    src: url(assets/font/sofia/Sofia-Regular.otf);
+    font-weight: 100;
+}
+
+/* --- media division "mobile device"---- */
+
+@media screen and (max-width: 767px) {
+    .font_glitter{
+        margin: 0;
+        font-family: greatvibes;
+        font-size: 60px;
+        color: rgba(250,250,250, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .font_glitter_klein{
+        margin: 0;
+        font-family: greatvibes;
+        font-size: 40px;
+        color: rgba(250,250,250, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .untertitel{
+        margin: 0;
+        padding-top: 40px;
+        font-family: forum;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 30px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .text_intro{
+        margin: 0;
+        padding-top: 20px;
+        font-family: forum;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 20px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .text_intro_glitter{
+        margin: 0;
+        padding-top: 30px;
+        font-family: greatvibes;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 40px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .font_header_slides{
+        font-family: greatvibes;
+        font-size: 40px;
+        overflow-wrap: break-word
+    }
+
+    a{
+        font-family: forum;
+        color: black;
+        font-size: 18px;
+        text-decoration: underline;
+    }
+    
+    .text_slides{
+        font-family: forum;
+        color: black;
+        font-size: 18px;
+        overflow-wrap: break-word;
+    }
+
+    .text_slides_glitter{
+        font-family: greatvibes;
+        color: black;
+        font-size: 23px;
+        font-style: italic;
+    }
+
+    .untertitel_klein{
+        margin: 0;
+        padding-top: 30px;
+        font-family: forum;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 20px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .outro_klein{
+        margin: 0;
+        font-family: forum;
+        font-size: 20px;
+        color: rgba(250,250,250, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .outro_gruss{
+        margin: 0;
+        font-family: greatvibes;
+        font-size: 60px;
+        color: rgba(230,230,230, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+        padding-top: 60px;
+    }
+
+    .arrow-down{
+        font-size: 60px !important;
+        color: rgba(0, 0, 0, 0.6) !important;
+        left: 40% !important;
+    }
+
+    /* .viewing{
+        width: 200px !important;
+    } */
+
+    .overview-background-img {       
+        /* background: url(assets/start_couple.jpg) no-repeat right center fixed; 
+        background-size: cover;
+        background-attachment:scroll; */
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* To compensate for mobile browser address bar space */
+        background: url(assets/start_couple.jpg) no-repeat; 
+        background-size: auto 100%;
+        background-position: right;
+
+     }
+    
+    .dresscode-background-img {
+        /* background: url(assets/hamburg.jpg) no-repeat center center fixed;
+        background-size: cover; */
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90%; /* To compensate for mobile browser address bar space */
+        background: url(assets/hamburg.jpg) no-repeat; 
+        background-size: auto 100%;
+        background-position: center;
+    }
+    
+    .end-background-img {
+        /* background: url(assets/hands.jpg) no-repeat center center fixed;
+        background-size: cover; */
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* To compensate for mobile browser address bar space */
+        background: url(assets/hands.jpg) no-repeat; 
+        background-size: auto 100%;
+        background-position: center;
+    }
+    
+    .intro-background-img {
+        /* background: url(assets/verlobung.jpg) no-repeat center center fixed; 
+        background-size: cover; */
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* To compensate for mobile browser address bar space */
+        background: url(assets/verlobung.jpg) no-repeat; 
+        background-size: auto 100%;
+        background-position: center;
+    }
+
+    .viewing{
+        background:#fff !important;
+    }
+
+  }
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* --- media division "iPad"---- */
+
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+
+    .font_glitter{
+        margin: 0;
+        font-family: greatvibes;
+        font-size: 100px;
+        color: rgba(250,250,250, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .font_glitter_klein{
+        margin: 0;
+        font-family: greatvibes;
+        font-size: 60px;
+        color: rgba(250,250,250, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .untertitel{
+        margin: 0;
+        padding-top: 100px;
+        font-family: forum;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 40px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .text_intro{
+        margin: 0;
+        padding-top: 20px;
+        font-family: forum;
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .text_intro_glitter{
+        margin: 0;
+        padding-top: 30px;
+        font-family: greatvibes;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 50px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .font_header_slides{
+        font-family: greatvibes;
+        font-size: 50px;
+    }
+
+    a{
+        font-family: forum;
+        color: black;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+
+    .text_slides{
+        font-family: forum;
+        color: black;
+        font-size: 20px;
+    }
+
+    .text_slides_glitter{
+        font-family: greatvibes;
+        color: black;
+        font-size: 30px;
+        font-style: italic;
+    }
+
+    .untertitel_klein{
+        margin: 0;
+        padding-top: 20px;
+        font-family: forum;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 30px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+
+    }
+
+    .outro_klein{
+        margin: 0;
+        font-family: forum;
+        font-size: 40px;
+        color: rgba(250,250,250, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+        padding-bottom: 20px;
+    }
+
+    .outro_gruss{
+        margin: 0;
+        font-family: greatvibes;
+        font-size: 70px;
+        color: rgba(230,230,230, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .arrow-down{
+        font-size: 80px !important;
+        color: rgba(0, 0, 0, 0.6) !important;
+        margin-top: -10px;
+        left: 50% !important;
+    }
+
+    .overview-background-img {
+        /* background: url(assets/start_couple.jpg) no-repeat center center fixed; 
+        background-size: cover; */
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* To compensate for mobile browser address bar space */
+        background: url(assets/start_couple.jpg) no-repeat; 
+        background-size: auto 100%;
+        background-position: center;
+    }
+    
+    .dresscode-background-img {
+        /* background: url(assets/hamburg.jpg) no-repeat center center fixed;
+        background-size: cover; */
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* To compensate for mobile browser address bar space */
+        background: url(assets/hamburg.jpg) no-repeat; 
+        background-size: auto 100%;
+        background-position: center;
+    }
+    
+    .end-background-img {
+        /* background: url(assets/hands.jpg) no-repeat center center fixed;
+        background-size: cover; */
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* To compensate for mobile browser address bar space */
+        background: url(assets/hands.jpg) no-repeat; 
+        background-size: auto 100%;
+        background-position: center;
+    }
+    
+    .intro-background-img {
+        /* background: url(assets/verlobung.jpg) no-repeat center center fixed; 
+        background-size: cover; */
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* To compensate for mobile browser address bar space */
+        background: url(assets/verlobung.jpg) no-repeat; 
+        background-size: auto 100%;
+        background-position: center;
+    }
+    
+    .viewing{
+        background:#fff !important;
+    }
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* --- media division "desktop"---- */
+
+  @media screen and (min-width: 1150px) {
+    .font_glitter{
+        margin: 0;
+        font-family: greatvibes;
+        font-size: 100px;
+        color: rgba(250,250,250, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .font_glitter_klein{
+        margin: 0;
+        font-family: greatvibes;
+        font-size: 60px;
+        color: rgba(250,250,250, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .untertitel{
+        margin: 0;
+        padding-top: 100px;
+        font-family: forum;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 40px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .text_intro{
+        margin: 0;
+        padding-top: 20px;
+        font-family: forum;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 30px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .text_intro_glitter{
+        margin: 0;
+        padding-top: 30px;
+        font-family: greatvibes;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 50px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .font_header_slides{
+        font-family: greatvibes;
+        font-size: 50px;
+    }
+
+    a{
+        font-family: forum;
+        color: black;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+
+    .text_slides{
+        font-family: forum;
+        color: black;
+        font-size: 20px;
+    }
+
+    .text_slides_glitter{
+        font-family: greatvibes;
+        color: black;
+        font-size: 30px;
+        font-style: italic;
+    }
+
+    .untertitel_klein{
+        margin: 0;
+        padding-top: 20px;
+        font-family: forum;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 30px;
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .outro_klein{
+        margin: 0;
+        font-family: forum;
+        font-size: 40px;
+        color: rgba(250,250,250, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+        padding-bottom: 20px;
+    }
+
+    .outro_gruss{
+        margin: 0;
+        font-family: greatvibes;
+        font-size: 70px;
+        color: rgba(230,230,230, .95);
+        text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+    }
+
+    .arrow-down{
+        font-size: 80px !important;
+        color: rgba(0, 0, 0, 0.6) !important;
+        margin-top: -10px;
+        left: 50% !important;
+    }
+
+    .overview-background-img {
+        background: url(assets/start_couple.jpg) no-repeat center center fixed; 
+        background-size: cover;
+        
+    }
+    
+    .dresscode-background-img {
+        background: url(assets/hamburg.jpg) no-repeat center center fixed;
+        background-size: cover;
+        
+    }
+    
+    .end-background-img {
+        background: url(assets/hands.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    .intro-background-img {
+        background: url(assets/verlobung.jpg) no-repeat center center fixed; 
+        background-size: cover;
+    }
+    
+    .viewing{
+        background:#fff !important;
+    }
+
+    .link_popup{
+        font-size: 12px;
+    }
+
+  }
+
+/* ################################################################################################# */
+
+
+.frame_border {
+    border-style: solid !important;
+    border-color: #c9a51266 !important
+}
