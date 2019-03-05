@@ -11,7 +11,7 @@
 <style>
   body {
   /* feel free to change height */
-  height: 1800px;
+  height: 3000px;
   background: white;
 }
 
@@ -76,6 +76,10 @@ h1 {
   position: relative;
 }
 
+.path1_2_hide{
+  display: none;
+}
+
 </style>
 
 
@@ -90,8 +94,6 @@ h1 {
   <div><img id="map" src="assets/basemap_screenshot.JPG"></div>
   <div id="marker"></div>
 </div>
-
-
 
 
 
@@ -175,40 +177,60 @@ h1 {
 
 <script type="text/javascript">
 
+  // function init(){
+  //   var svg = document.getElementById("tag1_2")
+  //
+  //   var path1 ´document.createElement("path")
+  //   path1.setAttribute("stroke","red")
+  //
+  //   svg.appendChild(path1)
+  // }
+  // path speichern als json (nur "m")
+  // in svg tag nur das img reintun
+  // scroll eventlistener reintung
+
+
   AOS.init();
 
-  // Get a reference to the <path>
-  var path = document.querySelector('#path1_2');
-  console.log("Path: " + path);
-  // Get length of path... ~577px in this case
-  var pathLength = path.getTotalLength();
-  console.log("Length: " + pathLength);
-  // Make very long dashes (the length of the path itself)
-  path.style.strokeDasharray = pathLength + ' ' + pathLength;
-  // Offset the dashes so the it appears hidden entirely
-  path.style.strokeDashoffset = pathLength;
-  // Jake Archibald says so
-  // https://jakearchibald.com/2013/animated-line-drawing-svg/
-  path.getBoundingClientRect();
-  // When the page scrolls...
-  window.addEventListener("scroll", function(e) {
-    // What % down is it?
-    // https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript/2387222#2387222
-    // Had to try three or four differnet methods here. Kind of a cross-browser nightmare.
-    var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-    // Length to offset the dashes
-    var drawLength = pathLength * scrollPercentage;
-    // Draw in reverse
-    path.style.strokeDashoffset = pathLength - drawLength;
-    // When complete, remove the dash array, otherwise shape isn't quite sharp
-   // Accounts for fuzzy math
-    if (scrollPercentage >= 0.99) {
-      path.style.strokeDasharray = "none";
-    } else {
-      path.style.strokeDasharray = pathLength + ' ' + pathLength;
-    }
+    //Path und style
+    var path = document.querySelector('#path1_2'); // Get a reference to the <path>
+    console.log("Path: " + path);
+    var pathLength = path.getTotalLength(); // Get length of path... ~577px in this case
+    console.log("Length: " + pathLength);
+    path.style.strokeDasharray = pathLength + ' ' + pathLength; // Make very long dashes (the length of the path itself)
+    path.style.strokeDashoffset = pathLength; // Offset the dashes so the it appears hidden entirely
+    path.getBoundingClientRect(); // https://jakearchibald.com/2013/animated-line-drawing-svg/
 
-  });
+
+
+
+
+
+  window.onscroll = function() {myFunction()};
+
+  function myFunction() {
+    if (document.body.scrollTop < 1500 || document.documentElement.scrollTop < 1500) {
+      pathScroll(pathLength,1500);
+    } else if (document.body.scrollTop > 1501 || document.documentElement.scrollTop > 1501){
+      document.getElementById("tag1_2").className = "path1_2_hide";
+      console.log("stop");
+
+      //pathScroll(pathLength);
+    }
+  }
+
+  function pathScroll(pathLength, indiv_scrollheight) {
+      window.addEventListener("scroll", function(e) {
+        var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / indiv_scrollheight; //1500;//(document.documentElement.scrollHeight - document.documentElement.clientHeight); // What % down is it?
+        var drawLength = pathLength * scrollPercentage; // Length to offset the dashes
+        path.style.strokeDashoffset = pathLength - drawLength; // Draw in reverse
+        if (scrollPercentage >= 0.99) { // When complete, remove the dash array, otherwise shape isn't quite sharp
+          path.style.strokeDasharray = "none";
+        } else {
+          path.style.strokeDasharray = pathLength + ' ' + pathLength;
+        }
+      });
+    }
 </script>
 
 
