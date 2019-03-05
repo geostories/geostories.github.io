@@ -41,8 +41,9 @@ z-index: 9;
 position: absolute;
 height: 200px;
 margin: auto;
-left: 75px;
+left: -175px;
 top: 80px;
+transform: rotate(90deg);
 }
 
 
