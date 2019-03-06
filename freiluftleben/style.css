@@ -1,6 +1,6 @@
 body {
 /* feel free to change height */
-height: 3000px;
+height: 3600px;
 background: white;
 }
 
@@ -39,10 +39,10 @@ max-width: 100%;
 #tag1_2{
 z-index: 9;
 position: absolute;
-height: 200px;
+height: 220px;
 margin: auto;
-left: -175px;
-top: 80px;
+left: -180px;
+top: 140px;
 transform: rotate(90deg);
 }
 
@@ -59,6 +59,14 @@ height: 500px;
 width: 15%;
 left: 100px;
 } */
+
+#marker_star{
+  width: 20px;
+  z-index: 10;
+  position: absolute;
+  left: 95px;
+  top: 120px;
+}
 
 #textbox{
 width: 350px;
