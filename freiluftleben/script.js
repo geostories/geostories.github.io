@@ -1,22 +1,41 @@
 window.addEventListener("scroll", function(ev) {
 
   var scrollHeight = document.documentElement.scrollTop;
-  if (scrollHeight < 1500) {
-    pathScroll(path1,0,1300);
-    document.getElementById("path1_2").style.display = "block";
+  console.log(scrollHeight)
+
+  if (scrollHeight < 216) {
+    document.getElementById("marker_star").style.display = "none";
+  }
+  else if (scrollHeight > 216) {
+    document.getElementById("marker_star").style.display = "block";
+  }
+
+  if (scrollHeight < 216) {
+    pathScroll(path1,0,150);
+    document.getElementById("path1").style.display = "block";
+    document.getElementById("path2").style.display = "none";
+    document.getElementById("path3").style.display = "none";
+    document.getElementById("path4").style.display = "none";
+  }
+  else if (scrollHeight > 216 && scrollHeight < 1500) {
+    pathScroll(path2,216,1300);
+    document.getElementById("path2").style.display = "block";
+    document.getElementById("path1").style.display = "none";
     document.getElementById("path3").style.display = "none";
     document.getElementById("path4").style.display = "none";
   }
   else if (scrollHeight > 1500 && scrollHeight < 2500) {
     pathScroll(path3, 1500, 900)
     document.getElementById("path3").style.display = "block";
-    document.getElementById("path1_2").style.display = "none";
+    document.getElementById("path1").style.display = "none";
+    document.getElementById("path2").style.display = "none";
     document.getElementById("path4").style.display = "none";
   }
   else if (scrollHeight > 2000 && scrollHeight < 3500) {
     pathScroll(path4, 2500, 500)
     document.getElementById("path4").style.display = "block";
-    document.getElementById("path1_2").style.display = "none";
+    document.getElementById("path1").style.display = "none";
+    document.getElementById("path2").style.display = "none";
     document.getElementById("path3").style.display = "none";
   }
 });

@@ -39,10 +39,10 @@ max-width: 100%;
 #tag1_2{
 z-index: 9;
 position: absolute;
-height: 220px;
+height: 37%;
 margin: auto;
-left: -180px;
-top: 140px;
+left: -27%;
+top: 28%;
 transform: rotate(90deg);
 }
 
@@ -61,11 +61,12 @@ left: 100px;
 } */
 
 #marker_star{
-  width: 20px;
+  width: 4%;
   z-index: 10;
   position: absolute;
-  left: 95px;
-  top: 120px;
+  left: 22%;
+  top: 24%;
+  display: none;
 }
 
 #textbox{
