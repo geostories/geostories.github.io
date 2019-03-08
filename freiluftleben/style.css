@@ -25,6 +25,7 @@ bottom: 5%;
 left: 15%;
 width: 500px;
 z-index: -1;
+height: 480px;
 }
 
 #map {
@@ -45,20 +46,6 @@ left: -27%;
 top: 28%;
 transform: rotate(90deg);
 }
-
-
-
-/* #marker{
-position: absolute;
-background: url("assets/marker.svg") no-repeat;
-background-position: top;
-background-size: contain;
-top: 15px;
-z-index: 1;
-height: 500px;
-width: 15%;
-left: 100px;
-} */
 
 #marker_star{
   width: 4%;
