@@ -1,6 +1,6 @@
 body {
 /* feel free to change height */
-height: 3600px;
+height: 3400px;
 background: white;
 font-family: Verdana, Geneva, sans-serif;
 }
@@ -41,10 +41,10 @@ max-width: 100%;
 #tag1_2{
 z-index: 9;
 position: absolute;
-height: 21%;
+height: 60%;
 margin: auto;
-left: 16%;
-top: 43%;
+left: 33%;
+top: 10%;
 transform: rotate(90deg);
 }
 
@@ -56,7 +56,7 @@ transform: rotate(90deg);
   width: 4%;
   z-index: 10;
   position: absolute;
-  left: 48%;
+  left: 51%;
   top: 39%;
   display: none;
 }
@@ -86,8 +86,23 @@ path{
   color: #F0C800;
   font-weight: bold;
   position: absolute;
-  left: 57%;
-  top: 41%;
   display: none;
   text-shadow: 0.07em 0 #650, 0 0.07em #650, -0.07em 0 #650, 0 -0.07em #650;
+}
+
+#text_tag1{
+  left: 30%;
+  top: 26%;
+}
+#text_tag2{
+  left: 28%;
+  top: 40%;
+}
+#text_tag3{
+  left: 54%;
+  top: 41%;
+}
+#text_tag4{
+  left: 29%;
+  top: 37%;
 }

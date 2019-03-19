@@ -37,7 +37,7 @@ window.addEventListener("scroll", function(ev) {
     document.getElementById("text_tag2").style.display = "none";
     document.getElementById("text_tag4").style.display = "none";
   }
-  else if (scrollHeight > 2200 && scrollHeight < 3500) {
+  else if (scrollHeight > 2200 && scrollHeight < 3200) {
     pathScroll(path4, 2200, 500)
     document.getElementById("path1").style.stroke = "grey";
     document.getElementById("path2").style.stroke = "grey";
