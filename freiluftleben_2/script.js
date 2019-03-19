@@ -12,31 +12,41 @@ window.addEventListener("scroll", function(ev) {
 
   if (scrollHeight < 216) {
     pathScroll(path1,0,150);
-    document.getElementById("path1").style.display = "block";
-    document.getElementById("path2").style.display = "none";
-    document.getElementById("path3").style.display = "none";
-    document.getElementById("path4").style.display = "none";
+    document.getElementById("path1").style.stroke = "#F2C800";
+    document.getElementById("text_tag1").style.display = "block";
+    document.getElementById("text_tag2").style.display = "none";
+    document.getElementById("text_tag3").style.display = "none";
+    document.getElementById("text_tag4").style.display = "none";
   }
-  else if (scrollHeight > 216 && scrollHeight < 1500) {
-    pathScroll(path2,216,1300);
-    document.getElementById("path2").style.display = "block";
-    document.getElementById("path1").style.display = "none";
-    document.getElementById("path3").style.display = "none";
-    document.getElementById("path4").style.display = "none";
+  else if (scrollHeight > 216 && scrollHeight < 1100) {
+    pathScroll(path2,216,900);
+    document.getElementById("path1").style.stroke = "grey";
+    document.getElementById("path2").style.stroke = "#F2C800";
+    document.getElementById("text_tag2").style.display = "block";
+    document.getElementById("text_tag1").style.display = "none";
+    document.getElementById("text_tag3").style.display = "none";
+    document.getElementById("text_tag4").style.display = "none";
   }
-  else if (scrollHeight > 1500 && scrollHeight < 2500) {
-    pathScroll(path3, 1500, 900)
-    document.getElementById("path3").style.display = "block";
-    document.getElementById("path1").style.display = "none";
-    document.getElementById("path2").style.display = "none";
-    document.getElementById("path4").style.display = "none";
+  else if (scrollHeight > 1200 && scrollHeight < 2200) {
+    pathScroll(path3, 1200, 900)
+    document.getElementById("path1").style.stroke = "grey";
+    document.getElementById("path2").style.stroke = "grey";
+    document.getElementById("path3").style.stroke = "#F2C800";
+    document.getElementById("text_tag3").style.display = "block";
+    document.getElementById("text_tag1").style.display = "none";
+    document.getElementById("text_tag2").style.display = "none";
+    document.getElementById("text_tag4").style.display = "none";
   }
-  else if (scrollHeight > 2000 && scrollHeight < 3500) {
-    pathScroll(path4, 2500, 500)
-    document.getElementById("path4").style.display = "block";
-    document.getElementById("path1").style.display = "none";
-    document.getElementById("path2").style.display = "none";
-    document.getElementById("path3").style.display = "none";
+  else if (scrollHeight > 2200 && scrollHeight < 3500) {
+    pathScroll(path4, 2200, 500)
+    document.getElementById("path1").style.stroke = "grey";
+    document.getElementById("path2").style.stroke = "grey";
+    document.getElementById("path3").style.stroke = "grey";
+    document.getElementById("path4").style.stroke = "#F2C800";
+    document.getElementById("text_tag4").style.display = "block";
+    document.getElementById("text_tag1").style.display = "none";
+    document.getElementById("text_tag2").style.display = "none";
+    document.getElementById("text_tag3").style.display = "none";
   }
 });
 
@@ -49,4 +59,5 @@ function pathScroll(path, offset,  indiv_scrollheight) {
       } else {
         path.style.strokeDasharray = path.getTotalLength() + ' ' + path.getTotalLength();
       }
+
   }

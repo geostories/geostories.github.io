@@ -2,6 +2,7 @@ body {
 /* feel free to change height */
 height: 3600px;
 background: white;
+font-family: Verdana, Geneva, sans-serif;
 }
 
 h1 {
@@ -47,6 +48,10 @@ top: 43%;
 transform: rotate(90deg);
 }
 
+#path1, path2, path3, path4 {
+  stroke: grey;
+}
+
 #marker_star{
   width: 4%;
   z-index: 10;
@@ -65,6 +70,24 @@ position: relative;
 .pics{
   width: 500px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;"
+  border-radius: 1px;
+  /* padding: 5px;" */
+}
+
+path{
+  stroke: #F2C800;
+  fill: none;
+  stroke-width: 16;
+}
+
+#text_tag1, #text_tag2, #text_tag3, #text_tag4 {
+  z-index: 10;
+  font-size: 20px;
+  color: #F0C800;
+  font-weight: bold;
+  position: absolute;
+  left: 57%;
+  top: 41%;
+  display: none;
+  text-shadow: 0.07em 0 #650, 0 0.07em #650, -0.07em 0 #650, 0 -0.07em #650;
 }
