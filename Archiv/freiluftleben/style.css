@@ -1,0 +1,71 @@
+body {
+/* feel free to change height */
+height: 3600px;
+background: white;
+}
+
+h1 {
+font-family: 'Open Sans', sans-serif;
+font-weight: 300;
+color: black;
+text-transform: uppercase;
+font-size: 30px;
+letter-spacing: 5px;
+font-weight: 100;
+padding: 25px 15px;
+/* text-shadow: 1px 1px 1px #333; */
+margin-top: 90px;
+margin-left: 50%;
+}
+
+#map_svg_container{
+position: fixed;
+top: 5%;
+bottom: 5%;
+left: 15%;
+width: 500px;
+z-index: -1;
+height: 480px;
+}
+
+#map {
+position: absolute;
+z-index: 1;
+height: auto;
+max-height: 100%;
+width: auto;
+max-width: 100%;
+}
+
+#tag1_2{
+z-index: 9;
+position: absolute;
+height: 37%;
+margin: auto;
+left: -27%;
+top: 28%;
+transform: rotate(90deg);
+}
+
+#marker_star{
+  width: 4%;
+  z-index: 10;
+  position: absolute;
+  left: 22%;
+  top: 24%;
+  display: none;
+}
+
+#textbox{
+width: 350px;
+margin-left: 40%;
+position: relative;
+}
+
+.path1_2_hide{
+display: none;
+}
+
+#path3{
+
+}

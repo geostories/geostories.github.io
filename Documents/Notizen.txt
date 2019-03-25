@@ -1,0 +1,30 @@
+Programmierer Optionen:
+- Steven
+- Studenten Praktikum (FH Salzburg)
+- Fivr
+
+
+Beispiele:
+- Freiluftleben 
+- UNIGIS
+- CIAT
+- Karl Defense
+- Bernd Molke
+- BMW Landshut - Christoph
+
+
+Notizen:
+- https://jupiterx.artbees.net/ --> Verkaufs-/Produktidee
+- Wordpress Plugin
+
+
+Designmöglichkeiten:
+- Karte ganz groß und im Hintergrund --> Text kommt reingescrollt über der Karte
+- Karte links und rechts der Text
+- simplifizierte Karte links und rechts der Text
+
+- Linien ausgrauen, nicht verschwinden lassen
+- weitere Informationen aufpoppen lassen, wenn diese soweit dran sind --> mit dem Text verbinden
+- Linien beschriften
+- auf Kartenausschnitt zoomen
+- Karte mit Google Maps verknüpfen
