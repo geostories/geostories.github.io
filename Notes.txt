@@ -1,4 +1,10 @@
-Examples:
+Examples as inspiration:
+https://tympanus.net/Development/StorytellingMap/
+https://www.nytimes.com/interactive/2014/07/03/world/middleeast/syria-iraq-isis-rogue-state-along-two-rivers.html
+http://www.nytimes.com/newsgraphics/2013/07/21/silk-road/index.html
+http://www.nytimes.com/newsgraphics/2013/10/13/russia/index.html
+
+Examples to develop:
 - Freiluftleben 
 - UNIGIS
 - CIAT
