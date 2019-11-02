@@ -1,0 +1,108 @@
+body {
+/* feel free to change height */
+height: 3400px;
+background: white;
+font-family: Verdana, Geneva, sans-serif;
+}
+
+h1 {
+font-family: Verdana, Geneva, sans-serif; /*'Open Sans', sans-serif;*/
+font-weight: 300;
+color: black;
+text-transform: uppercase;
+font-size: 30px;
+letter-spacing: 5px;
+font-weight: 100;
+padding: 25px 15px;
+/* text-shadow: 1px 1px 1px #333; */
+margin-top: 90px;
+margin-left: 50%;
+}
+
+#map_svg_container{
+position: fixed;
+top: 0%;
+bottom: 0%;
+left: 1%;
+width: 500px;
+z-index: -1;
+height: 100%;
+}
+
+#map {
+position: absolute;
+z-index: 1;
+height: auto;
+max-height: 150%;
+width: auto;
+max-width: 100%;
+}
+
+#tag1_2{
+z-index: 9;
+position: absolute;
+height: 60%;
+margin: auto;
+left: 33%;
+top: 10%;
+transform: rotate(90deg);
+}
+
+#path1, path2, path3, path4 {
+  stroke: grey;
+}
+
+#marker_star{
+  width: 4%;
+  z-index: 10;
+  position: absolute;
+  left: 51%;
+  top: 39%;
+  display: none;
+}
+
+#textbox{
+width: 450px;
+margin-left: 50%;
+position: relative;
+}
+
+.pics{
+  width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  /* padding: 5px;" */
+}
+
+path{
+  stroke: #F2C800;
+  fill: none;
+  stroke-width: 16;
+}
+
+#text_tag1, #text_tag2, #text_tag3, #text_tag4 {
+  z-index: 10;
+  font-size: 20px;
+  color: #F0C800;
+  font-weight: bold;
+  position: absolute;
+  display: none;
+  text-shadow: 0.07em 0 #650, 0 0.07em #650, -0.07em 0 #650, 0 -0.07em #650;
+}
+
+#text_tag1{
+  left: 30%;
+  top: 26%;
+}
+#text_tag2{
+  left: 28%;
+  top: 40%;
+}
+#text_tag3{
+  left: 54%;
+  top: 41%;
+}
+#text_tag4{
+  left: 29%;
+  top: 37%;
+}
