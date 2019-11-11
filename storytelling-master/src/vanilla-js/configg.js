@@ -1,4 +1,4 @@
-var config = {
+var configg = {
     style: 'mapbox://styles/monabartling/ck2sb9xzb17tb1co1mf257lhr',
     accessToken: 'pk.eyJ1IjoibW9uYWJhcnRsaW5nIiwiYSI6ImNpeWQyMTUweDAwcTEyd3BlNGswMGtwMGoifQ.tM-yCumZHhlK0h-YTexAHw',
     showMarkers: false,

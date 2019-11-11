@@ -132,36 +132,36 @@ function setLayerOpacity(layer) {
 
 var story = document.getElementById('story');
 var features = document.createElement('div');
-features.classList.add(alignments[config.alignment]);
+features.classList.add(alignments[configg.alignment]);
 features.setAttribute('id', 'features');
 
 var header = document.createElement('div');
 
-if (config.title) {
+if (configg.title) {
     var titleText = document.createElement('h1');
-    titleText.innerText = config.title;
+    titleText.innerText = configg.title;
     header.appendChild(titleText);
 }
 
-if (config.subtitle) {
+if (configg.subtitle) {
     var subtitleText = document.createElement('h2');
-    subtitleText.innerText = config.subtitle;
+    subtitleText.innerText = configg.subtitle;
     header.appendChild(subtitleText);
 }
 
-if (config.byline) {
+if (configg.byline) {
     var bylineText = document.createElement('p');
-    bylineText.innerText = config.byline;
+    bylineText.innerText = configg.byline;
     header.appendChild(bylineText);
 }
 
 if (header.innerText.length > 0) {
-    header.classList.add(config.theme);
+    header.classList.add(configg.theme);
     header.setAttribute('id', 'header');
     story.appendChild(header);
 }
 
-config.chapters.forEach((record, idx) => {
+configg.chapters.forEach((record, idx) => {
     var container = document.createElement('div');
     var chapter = document.createElement('div');
     
@@ -189,7 +189,7 @@ config.chapters.forEach((record, idx) => {
         container.classList.add('active');
     }
 
-    chapter.classList.add(config.theme);
+    chapter.classList.add(configg.theme);
     container.appendChild(chapter);
     features.appendChild(container);
 });
@@ -198,19 +198,19 @@ story.appendChild(features);
 
 var footer = document.createElement('div');
 
-if (config.footer) {
+if (configg.footer) {
     var footerText = document.createElement('p');
-    footerText.innerHTML = config.footer;
+    footerText.innerHTML = configg.footer;
     footer.appendChild(footerText);
 }
 
 if (footer.innerText.length > 0) {
-    footer.classList.add(config.theme);
+    footer.classList.add(configg.theme);
     footer.setAttribute('id', 'footer');
     story.appendChild(footer);
 }
 
-mapboxgl.accessToken = config.accessToken;
+mapboxgl.accessToken = configg.accessToken;
 
 const transformRequest = (url) => {
     const hasQuery = url.indexOf("?") !== -1;	  
@@ -222,18 +222,18 @@ const transformRequest = (url) => {
 
 var map = new mapboxgl.Map({
     container: 'map',
-    style: config.style,
-    center: config.chapters[0].location.center,
-    zoom: config.chapters[0].location.zoom,
-    bearing: config.chapters[0].location.bearing,
-    pitch: config.chapters[0].location.pitch,
+    style: configg.style,
+    center: configg.chapters[0].location.center,
+    zoom: configg.chapters[0].location.zoom,
+    bearing: configg.chapters[0].location.bearing,
+    pitch: configg.chapters[0].location.pitch,
     scrollZoom: false,
     transformRequest: transformRequest
 });
 
 var marker = new mapboxgl.Marker();
-if (config.showMarkers) {
-    marker.setLngLat(config.chapters[0].location.center).addTo(map);
+if (configg.showMarkers) {
+    marker.setLngLat(configg.chapters[0].location.center).addTo(map);
 }
 
 // instantiate the scrollama
@@ -248,10 +248,10 @@ map.on("load", function() {
         progress: true
     })
     .onStepEnter(response => {
-        var chapter = config.chapters.find(chap => chap.id === response.element.id);
+        var chapter = configg.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.add('active');
         map.flyTo(chapter.location);
-        if (config.showMarkers) {
+        if (configg.showMarkers) {
             marker.setLngLat(chapter.location.center);
         }
         if (chapter.onChapterEnter.length > 0) {
@@ -259,7 +259,7 @@ map.on("load", function() {
         }
     })
     .onStepExit(response => {
-        var chapter = config.chapters.find(chap => chap.id === response.element.id);
+        var chapter = configg.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.remove('active');
         if (chapter.onChapterExit.length > 0) {
             chapter.onChapterExit.forEach(setLayerOpacity);
